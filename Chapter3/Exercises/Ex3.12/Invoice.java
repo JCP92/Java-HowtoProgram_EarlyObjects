@@ -33,14 +33,18 @@ public class Invoice{
 		return quantity;
 	}
 	public void setQuantity(int number){
-		quantity = number;
+		if(number >= 0){
+			quantity = number;
+		}
 	}
 	
 	public double getCostPerItem(){
 		return costPerItem;
 	}
 	public void setCostPerItem(double value){
-		costPerItem = value;
+		if(value > 0.00){
+			costPerItem = value;
+		}
 	}
 	
 	public double getInvoiceAmount(){
